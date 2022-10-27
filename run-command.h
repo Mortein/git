@@ -151,8 +151,7 @@ struct child_process {
 
 /**
  * The functions: child_process_init, start_command, finish_command,
- * run_command, run_command_v_opt, run_command_v_opt_cd_env, child_process_clear
- * do the following:
+ * run_command, run_command_v_opt, child_process_clear do the following:
  *
  * - If a system call failed, errno is set and -1 is returned. A diagnostic
  *   is printed.
@@ -250,7 +249,6 @@ int run_command_v_opt_tr2(const char **argv, int opt, const char *tr2_class);
  * env (the environment) is to be formatted like environ: "VAR=VALUE".
  * To unset an environment variable use just "VAR".
  */
-int run_command_v_opt_cd_env(const char **argv, int opt, const char *dir, const char *const *env);
 int run_command_v_opt_cd_env_tr2(const char **argv, int opt, const char *dir,
 				 const char *const *env, const char *tr2_class);
 
